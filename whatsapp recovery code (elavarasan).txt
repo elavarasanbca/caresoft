@@ -1,0 +1,15 @@
+KHVLKMH91VZJA6CQAEQC22PL
+
+const accountSid = 'ACaefb077141e29f46a763450ca2083497';
+const authToken = 'c2e4aac6b05e752e2904741d4db094e9';
+
+
+EAAPm7VPcWGIBOZCLZA2NXwRSRtxMINxR3RZCjZBMpBKBGKOvgy0mq2rgchrCEs4fvjUZAU1CYBxa7zar1j0ZC0xaTC4jQ0znQr6c7bZCMmrOxBGHkx6Izi6igZB8IVv696q1A61fkZA7Kpe3koML7nsRXGpe2FPjybQnxQa2ULcpnO3vavnwj5sgTGxCBaLHmMhoOa20vnWc0GezEkLqh72aJo3CJdkA2kF4fkH8ZD
+Phone number ID: 667639189763946
+WhatsApp Business Account ID: 1349851629660396
+
+App ID - 1098331918719074
+
+App secret - abfadd7b9b686918df8e52d52dc3f7f2
+
+gmail app pass - ouwq rhon ifsm tkys

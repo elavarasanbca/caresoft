@@ -1,0 +1,298 @@
+/* Dashboard container */
+.dashboard1 {
+    margin-left: 15dvw; /* Adjust based on sidebar width */
+    padding: 20px;
+    background-color: #f4f6f9;
+   
+    min-height: 100vh;
+    box-sizing: border-box;
+  
+  }
+  
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header h1 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+  }
+  
+  .create-ticket {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .create-ticket:hover {
+    background: #0056b3;
+  }
+  
+  /* Statistics Section */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .stat-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .stat-box:hover {
+    transform: translateY(-5px);
+  }
+  
+  .stat-box h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #444;
+  }
+  
+  .stat-box p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* Unique Colors for Each Box */
+  .t1 { border-left: 5px solid #007bff; }
+  .t2 { border-left: 5px solid #ff9800; }
+  .t3 { border-left: 5px solid #4caf50; }
+  .t4 { border-left: 5px solid #9c27b0; }
+  .t1:hover, .t2:hover, .t3:hover, .t4:hover {
+    cursor: pointer;
+    background-size: 400%;
+    animation: an 1s ease-in-out infinite;
+
+  }
+  @keyframes ans {
+    0%{
+      background-position: 0% 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    0%{
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Filter Section */
+  .filters {
+    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .search,
+  .filter {
+    flex: 1;
+  }
+  
+  .search label,
+  .filter label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .search input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .date-filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .date-filters input,
+  .date-filters select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .dashboard1 {
+      margin-left: 60px; /* Adjust for collapsed sidebar */
+      padding: 15px;
+    }
+  
+    .header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .stats {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .filters {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .stats {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+
+  /* Data Table Styling */
+.data-table {
+  margin-top: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto; /* Enables horizontal scrolling for smaller screens */
+}
+
+/* Table */
+.data-table table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+/* Table Headers */
+.data-table th {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: 1px solid #ddd;
+  font-size: 12px;
+}
+
+/* Table Rows */
+.data-table td {
+  padding: 5px;
+  border: 1px solid #ddd;
+  font-size: 12px;
+  color: #333;
+}
+
+/* Alternate Row Background */
+.data-table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/* Hover Effect */
+.data-table tbody tr:hover {
+  background-color: #e9ecef;
+  transition: 0.3s ease-in-out;
+}
+
+/* Clear Table Button */
+.clear-button {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.clear-button:hover {
+  background: #c82333;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  .data-table table {
+    font-size: 12px;
+  }
+
+  .data-table th, 
+  .data-table td {
+    padding: 8px;
+  }
+
+  .clear-button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .data-table table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .clear-button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+ .data-table .filter_row th{
+
+  background-color: #ffffff;
+}
+
+table input{
+  padding: 10px;
+  font-size: 12px;
+  margin: 0px;
+}
+table select{
+  padding: 0px;
+}
+
+
+/* exports buttons */
+.exports{
+  
+  display: flex;
+  padding:5px ;
+  gap: 20px; 
+}
+.exports img{
+  padding: 5px;
+  border: 1px solid grey;
+  border-radius: 3px;
+  scale: 0.9;
+  transition: all 0.1.s ease-in-out;
+}
+.exports img:hover{
+  background-color: rgba(128, 128, 128, 0.089);
+  scale: 1;
+}

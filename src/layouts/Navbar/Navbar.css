@@ -1,0 +1,134 @@
+
+
+
+/* Sidebar Styling */
+.sidebar {
+  width: 15vw;
+  height: 100vh;
+  /*background-color: rgb(4, 71, 138);*/
+  z-index: 1;
+  background: linear-gradient(-45deg , rgb(0, 153, 255), rgb(31, 132, 228) , blue ,rgb(119, 0, 255));
+  background-size: 400%;
+
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+  transition: width 0.3s ease;
+  animation: animate ease 5s infinite;
+}
+
+
+@keyframes animate{
+  0%{
+      background-position: 0% 50%;
+  }
+ 
+  50%{
+    background-position: 100% 50%;
+  }
+
+
+  75%{
+      background-position: 80% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.menu-toggle {
+  
+
+  background: none;
+  border: none;
+  color: white;
+  font-size: 4px;
+  cursor: pointer;
+  margin: 10px;
+  display: none;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-list li {
+  padding: 15px 20px;
+}
+
+.nav-list a {
+  padding: 5px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+
+.nav-list a.active {
+  transition: all 0.2s ease-in-out;
+ border-left: 10px solid white;
+  border-radius:5px;
+}
+
+.nav-list .icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.nav-text{
+  width: auto;
+  font-size: 1em;
+}
+span{
+  margin-left: 10px;
+}
+
+.container{
+  
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Collapsed Mode */
+.sidebar.collapsed .nav-text {
+  display: none;
+}
+
+.sidebar.collapsed .icon {
+  margin-right: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.logo{
+  margin-bottom: 20pxs;
+  padding: 10px;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: auto;
+  }
+  .nav-text {
+    display: none;
+  }
+  .icon {
+    margin-right: 0;
+    text-align: center;
+    width: 100%;
+  }
+  .logo{
+    display: none;
+  }
+}
